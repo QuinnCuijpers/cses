@@ -1,0 +1,6 @@
+# Ignore all files generated during build by only keeping the directory structure and files with extensions
+*
+!/**/
+!*.*
+
+/.vscode
