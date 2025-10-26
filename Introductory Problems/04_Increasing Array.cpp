@@ -1,17 +1,18 @@
 #include <iostream>
+#include <vector>
 int main()
 {
-    int n;
+    size_t n;
     std::cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    std::vector<int> arr(n);
+    for (size_t i = 0; i < n; i++)
     {
         std::cin >> arr[i];
     }
 
     long long total_cost = 0;
 
-    for (int i = 1; i < n; i++)
+    for (size_t i = 1; i < n; i++)
     {
         if (arr[i] < arr[i - 1])
         {

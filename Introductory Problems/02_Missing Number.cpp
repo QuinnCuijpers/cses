@@ -2,17 +2,17 @@
 
 int main()
 {
-    int n;
+    size_t n;
     std::cin >> n;
-    int arr[n - 1];
-    for (int i = 0; i < n - 1; i++)
+    std::vector<int> arr(n - 1);
+    for (size_t i = 0; i < n - 1; i++)
     {
         std::cin >> arr[i];
     }
 
-    std::sort(arr, arr + (n - 1));
+    std::sort(arr.begin(), arr.end());
 
-    for (int i = 0; i < n - 2; i++)
+    for (size_t i = 0; i < n - 2; i++)
     {
         if (arr[i] + 1 != arr[i + 1])
         {

@@ -8,22 +8,22 @@ int main()
     std::cin >> n;
 
     long long total_sum = n * (n + 1) / 2;
-    long long half_sum_floored = total_sum / 2LL;
-    double half_sum = static_cast<double>(total_sum) / 2LL;
 
-    // std::cout << total_sum << std::endl;
-    // std::cout << half_sum_floored << std::endl;
-
-    if (half_sum_floored != half_sum)
+    if (total_sum % 2 != 0)
     {
         std::cout << "NO";
         exit(0);
     }
 
+    long long half_sum_floored = total_sum / 2LL;
+
+    // std::cout << total_sum << std::endl;
+    // std::cout << half_sum_floored << std::endl;
+
     std::cout << "YES" << std::endl;
 
-    std::vector<int> s_1;
-    std::vector<int> s_2;
+    std::vector<long long> s_1;
+    std::vector<long long> s_2;
 
     for (long long i = n; i > 0; i--)
     {

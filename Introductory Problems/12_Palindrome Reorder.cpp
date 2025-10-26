@@ -4,8 +4,8 @@
 
 bool is_palindrome(std::string s)
 {
-    int n = s.size();
-    for (int i = 0; i <= n / 2; i++)
+    size_t n = s.size();
+    for (size_t i = 0; i <= n / 2; i++)
     {
         if (s[i] != s[n - 1 - i])
         {
@@ -18,7 +18,7 @@ bool is_palindrome(std::string s)
 int main()
 {
     std::string s;
-    std::unordered_map<char, int> counter;
+    std::unordered_map<char, size_t> counter;
 
     // std::ifstream in_file;
     // in_file.open("./test_input.txt");
@@ -55,8 +55,7 @@ int main()
     for (auto c : counter)
     {
         char key = c.first;
-        int val = c.second;
-
+        size_t val = c.second;
         // std::cout << key << " " << val << std::endl;
 
         if (val % 2 == 0)
