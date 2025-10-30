@@ -63,12 +63,14 @@ int main()
             std::string new_substring = std::string(val / 2, key);
 
             solution.replace(palindrome_index, val / 2, new_substring);
-            solution.replace(solution.size() - palindrome_index - val / 2, val / 2, new_substring);
+            solution.replace(solution.size() - palindrome_index - val / 2,
+                             val / 2, new_substring);
             palindrome_index += val / 2;
         }
         else
         {
-            solution.replace((solution.size() - 1) / 2 - val / 2, val, std::string(val, key));
+            solution.replace((solution.size() - 1) / 2 - val / 2,
+                             val, std::string(val, key));
         }
     }
     std::cout << solution << std::endl;

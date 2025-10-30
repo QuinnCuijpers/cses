@@ -22,7 +22,10 @@ void solve(long long n)
     long long total_placements = n * n * (n * n - 1) / 2;
     long long amount_of_horizontal_boxes = (n - 2) * (n - 1);
     long long amount_of_vertical_boxes = (n - 1) * (n - 2);
-    long long result = total_placements - 2 * (amount_of_horizontal_boxes + amount_of_vertical_boxes);
+    long long result =
+        total_placements -
+        2 *
+            (amount_of_horizontal_boxes + amount_of_vertical_boxes);
     std::cout << result << std::endl;
 }
 

@@ -3,7 +3,9 @@
 
 typedef long long ll;
 
-ll length_from_square_location(ll x, ll y, ll square_location_x, ll square_location_y)
+ll length_from_square_location(ll x,
+                               ll y,
+                               ll square_location_x, ll square_location_y)
 {
     ll x_dist;
     ll y_dist;
@@ -53,13 +55,23 @@ int main()
         {
             ll square_location_x = ring_index;
             ll square_location_y = 0;
-            std::cout << square_value - length_from_square_location(x, y, square_location_x, square_location_y) << std::endl;
+            std::cout << square_value -
+                             length_from_square_location(x,
+                                                         y,
+                                                         square_location_x,
+                                                         square_location_y)
+                      << std::endl;
         }
         else
         {
             ll square_location_x = 0;
             ll square_location_y = ring_index;
-            std::cout << square_value - length_from_square_location(x, y, square_location_x, square_location_y) << std::endl;
+            std::cout << square_value -
+                             length_from_square_location(x,
+                                                         y,
+                                                         square_location_x,
+                                                         square_location_y)
+                      << std::endl;
         }
     }
 }
